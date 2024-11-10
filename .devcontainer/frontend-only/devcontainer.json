@@ -1,0 +1,21 @@
+{
+	"name": "podverse-frontend",
+	"dockerComposeFile": [
+    "../docker-compose.yml",
+    "docker-compose.yml"
+  ],
+	"service": "podverse_web",
+	"workspaceFolder": "/workspaces/podverse-web",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence:1": {}
+    // "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {},
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+  },
+  "remoteEnv": { "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}" },
+	"runServices": ["podverse_db", "podverse_api", "podverse_manticore"],
+	// "shutdownAction": "none",
+  "postAttachCommand": {
+    "first-run": "/workspaces/scripts/frontendSetup.sh"
+  }
+}

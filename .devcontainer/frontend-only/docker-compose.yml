@@ -1,0 +1,25 @@
+services:
+  podverse_api:
+    image: ""
+    build: ../podverse-api
+    container_name: podverse_api_local
+    privileged: true
+    depends_on:
+      - podverse_db
+    env_file:
+      - ../config/podverse-api-local.env
+    ports:
+      - '1234:1234'
+    expose:
+      - 80
+      - 1234
+    volumes:
+      - ../config/google/jwt.keys.json:/tmp/src/config/google/jwt.keys.json
+    command: npm start
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "1"
+        max-size: "50m"
+
+
