@@ -15,7 +15,7 @@ say_hello:
 	@echo "Hello Podverse"
 
 .PHONY: local_validate_init
-local_validate_init: config/podverse-api-local.env config/podverse-db-local.env config/podverse-web-local.env config/google/jwt.keys.json
+local_validate_init: config/podverse-api-local.env config/podverse-db-local.env config/podverse-web-local.env config/google/jwt.keys.json podverse-ops/manticore/manticore.conf
 
 config/podverse-api-local.env:
 	@echo "Missing: $@"
@@ -36,6 +36,11 @@ config/google/jwt.keys.json:
 	@echo "Missing: $@"
 	@echo "Creating empty keyfile"
 	echo '{}' > ./$@
+
+podverse-ops/manticore/manticore.conf:
+	@echo "Missing: $@"
+	@echo "Copying from example file"
+	cp ./$@.example ./$@
 
 .PHONY: local_nginx_proxy
 local_nginx_proxy:

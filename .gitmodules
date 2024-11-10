@@ -6,3 +6,7 @@
 	path = podverse-api
 	url = https://github.com/podverse/podverse-api.git
   ignore = all
+[submodule "podverse-ops"]
+  path = podverse-ops
+  url = https://github.com/podverse/podverse-ops.git
+  ignore = all
