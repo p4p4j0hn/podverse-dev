@@ -8,5 +8,5 @@
   ignore = all
 [submodule "podverse-ops"]
   path = podverse-ops
-  url = https://github.com/podverse/podverse-ops.git
+  url = https://github.com/p4p4j0hn/podverse-ops.git
   ignore = all
