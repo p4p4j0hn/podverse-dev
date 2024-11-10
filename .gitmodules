@@ -1,12 +1,15 @@
 [submodule "podverse-web"]
 	path = podverse-web
   url = https://github.com/podverse/podverse-web.git
+  branch = develop
   ignore = all
 [submodule "podverse-api"]
 	path = podverse-api
-	url = https://github.com/podverse/podverse-api.git
+  url = https://github.com/podverse/podverse-api.git
+  branch = develop
   ignore = all
 [submodule "podverse-ops"]
   path = podverse-ops
   url = https://github.com/p4p4j0hn/podverse-ops.git
+  branch = master
   ignore = all
