@@ -1,4 +1,4 @@
-# Podverse Development Environment
+# Unofficial Podverse Development Environment
 
 This repo is dedicated to helping you contribute to Podverse development.
 
