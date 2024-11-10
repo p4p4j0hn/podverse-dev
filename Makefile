@@ -18,29 +18,39 @@ say_hello:
 local_validate_init: config/podverse-api-local.env config/podverse-db-local.env config/podverse-web-local.env config/google/jwt.keys.json podverse-ops/manticore/manticore.conf
 
 config/podverse-api-local.env:
-	@echo "Missing: $@"
-	@echo "Copying from example file"
-	cp ./$@.example ./$@
+	@if ! [[ -f ./$@ ]]; then\
+		echo "Missing: $@";\
+		echo "Copying from example file";\
+		cp ./$@.example ./$@;\
+	fi
 
 config/podverse-db-local.env:
-	@echo "Missing: $@"
-	@echo "Copying from example file"
-	cp ./$@.example ./$@
+	@if ! [[ -f ./$@ ]]; then\
+		echo "Missing: $@";\
+		echo "Copying from example file";\
+		cp ./$@.example ./$@;\
+	fi
 
 config/podverse-web-local.env:
-	@echo "Missing: $@"
-	@echo "Copying from example file"
-	cp ./$@.example ./$@
+	@if ! [[ -f ./$@ ]]; then\
+		echo "Missing: $@";\
+		echo "Copying from example file";\
+		cp ./$@.example ./$@;\
+	fi
 
 config/google/jwt.keys.json:
-	@echo "Missing: $@"
-	@echo "Creating empty keyfile"
-	echo '{}' > ./$@
+	@if ! [[ -f ./$@ ]]; then;\
+		echo "Missing: $@";\
+		echo "Creating empty keyfile";\
+		echo '{}' > ./$@;\
+	fi
 
 podverse-ops/manticore/manticore.conf:
-	@echo "Missing: $@"
-	@echo "Copying from example file"
-	cp ./$@.example ./$@
+	@if ! [[ -f ./$@ ]]; then\
+		echo "Missing: $@";\
+		echo "Copying from example file";\
+		cp ./$@.example ./$@;\
+	fi
 
 .PHONY: local_nginx_proxy
 local_nginx_proxy:
