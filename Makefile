@@ -39,7 +39,7 @@ config/podverse-web-local.env:
 	fi
 
 config/google/jwt.keys.json:
-	@if ! [[ -f ./$@ ]]; then;\
+	@if ! [[ -f ./$@ ]]; then\
 		echo "Missing: $@";\
 		echo "Creating empty keyfile";\
 		echo '{}' > ./$@;\
