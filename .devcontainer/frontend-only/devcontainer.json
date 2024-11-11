@@ -13,7 +13,11 @@
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
   },
   "remoteEnv": { "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}" },
-  "runServices": ["podverse_db", "podverse_api", "podverse_manticore"],
+  "runServices": [
+    "podverse_db",
+    "podverse_api",
+    "podverse_manticore"
+  ],
   // "shutdownAction": "none",
   "postAttachCommand": {
     "first-run": "/workspaces/scripts/frontendSetup.sh"
