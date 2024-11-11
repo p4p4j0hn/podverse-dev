@@ -6,6 +6,9 @@
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence:1": {},
+    "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+      "packages": "cmake"
+    },
     // "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {},
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
   },
